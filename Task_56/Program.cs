@@ -1,7 +1,7 @@
 ﻿// Задача 56: Задайте прямоугольный двумерный массив. 
 // Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 Console.Clear();
-void createArray(int[,] array)
+void CreateArray(int[,] array)
 {
     for (int countOne = 0; countOne < array.GetLength(0); countOne++)
     {
@@ -22,7 +22,7 @@ void PrintArray(int[,] array)
         Console.WriteLine("");
     }
 }
-void rowSmallestAmount(int[,] array)
+void RowSmallestAmount(int[,] array)
 {
     {
         int min = Int32.MaxValue;
@@ -47,11 +47,11 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите желаемое количество столбцов в массиве: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int[n, m];
-createArray(array);
+CreateArray(array);
 Console.WriteLine("Вновь созданный массив: ");
 PrintArray(array);
 Console.WriteLine("Массив ПОСЛЕ подсчета сумм: ");
-rowSmallestAmount(array);
+RowSmallestAmount(array);
 Console.WriteLine("Всего доброго!");
 
 
