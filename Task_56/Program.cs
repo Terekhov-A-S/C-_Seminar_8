@@ -35,8 +35,11 @@ void RowSmallestAmount(int[,] array)
                 sum = array[countOne, countTwo] + sum;
             }
             Console.WriteLine(sum);
-            if (min > sum) { min = sum;  }
-            // row++;
+            if (min > sum)
+            {
+                min = sum;
+                row = countOne + 1;
+            }
         }
         Console.WriteLine($"Наименьшая сумма элементов: {min}, находится в строке: {row}");
     }
